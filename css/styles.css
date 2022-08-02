@@ -255,6 +255,30 @@ header {
 
 .img-what-we-do{
     width: 370px;
+    height: 294px;
+    position: relative;
+}
+
+.what-we-do-overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 27px;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: var(--white);
+}
+
+.what-we-do-overlay-title{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 }
 
 .our-team{
@@ -459,7 +483,7 @@ header {
     padding: 62px 24px;
     background-color: var(--overlay);
     transform: translatey(101%);
-    transition: transform 250ms ease;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-overlay>p {
