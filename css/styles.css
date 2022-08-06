@@ -44,6 +44,11 @@ ul{
     list-style: none;
 }
 
+label{
+    display: flex;
+    margin-bottom: 10px;
+}
+
 .section-title {
     font-weight: 700;
     font-size: 36px;
@@ -188,7 +193,7 @@ header {
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
-    width: 1600px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -409,7 +414,7 @@ header {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);    
 
-    transition-property: opacity, pointer-events;
+    transition-property: opacity, visibility;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -417,6 +422,7 @@ header {
 .backdrop.is-hidden{
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
 }
  
 .modal{
@@ -541,13 +547,13 @@ header {
     color: var(--white);
 }
 
-.project:hover,
-.project:focus {
+.project-link:hover,
+.project-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.project:hover .project-overlay,
-.project:focus .project-overlay {
+.project-link:hover .project-overlay,
+.project-link:focus .project-overlay {
     transform: translatex(0);
 }
 
@@ -565,6 +571,9 @@ header {
     margin-bottom: 0;
 }
 
+.project-link{
+    text-decoration: none;
+}
 
 .project-name {
     font-weight: 700;
@@ -572,6 +581,7 @@ header {
     line-height: 2;
     letter-spacing: 0.06em;
     margin-bottom: 4px;
+    color: var(--black-color);
 }
 
 .project-type {
